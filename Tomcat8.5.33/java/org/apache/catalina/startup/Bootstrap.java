@@ -254,6 +254,7 @@ public final class Bootstrap {
      */
     public void init() throws Exception {
 
+        //初始化类加载
         initClassLoaders();
 
         Thread.currentThread().setContextClassLoader(catalinaLoader);
@@ -263,6 +264,8 @@ public final class Bootstrap {
         // Load our startup class and call its process() method
         if (log.isDebugEnabled())
             log.debug("Loading startup class");
+
+        //实例化Catalina类
         Class<?> startupClass = catalinaLoader.loadClass("org.apache.catalina.startup.Catalina");
         Object startupInstance = startupClass.getConstructor().newInstance();
 
@@ -449,9 +452,9 @@ public final class Bootstrap {
 
 
     /**
+     * 主要启动方法
      * Main method and entry point when starting Tomcat via the provided
      * scripts.
-     *
      * @param args Command line arguments to be processed
      */
     public static void main(String args[]) {
@@ -460,6 +463,8 @@ public final class Bootstrap {
             // Don't set daemon until init() has completed
             Bootstrap bootstrap = new Bootstrap();
             try {
+
+                //初始化
                 bootstrap.init();
             } catch (Throwable t) {
                 handleThrowable(t);
@@ -482,7 +487,11 @@ public final class Bootstrap {
 
             if (command.equals("startd")) {
                 args[args.length - 1] = "start";
+
+                //实例化各组件 调用Catalina类的load方法
                 daemon.load(args);
+
+                //启动各组件 调用Catalina类的start方法
                 daemon.start();
             } else if (command.equals("stopd")) {
                 args[args.length - 1] = "stop";

@@ -45,6 +45,8 @@ import org.apache.catalina.startup.Catalina;
  * class in its constructor(s).
  *
  * @author Craig R. McClanahan
+ * server：整个servlet容器，一个tomcat对应一个server，一个server包含多个service
+ * server在tomcat中的实现类是：StandardServer
  */
 public interface Server extends Lifecycle {
 

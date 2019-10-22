@@ -285,6 +285,7 @@ public class Catalina {
         digester.setFakeAttributes(fakeAttributes);
         digester.setUseContextClassLoader(true);
 
+        //通过Digester去创建了Catania中的大量初始化工作
         // Configure the actions we will be using
         digester.addObjectCreate("Server",
                                  "org.apache.catalina.core.StandardServer",
@@ -536,6 +537,9 @@ public class Catalina {
         initNaming();
 
         // Create and execute our Digester
+        // Digester... 实例化组件
+        //Digester是一种将xml转化为java对象的事件驱动型工具，通过读取xml文件，
+        // 当识别到特定的节点的时候会执行特定的动作，创建java对象或者执行对象的某个方法
         Digester digester = createStartDigester();
 
         InputSource inputSource = null;
@@ -543,6 +547,8 @@ public class Catalina {
         File file = null;
         try {
             try {
+
+                //.....加载server.xml......
                 file = configFile();
                 inputStream = new FileInputStream(file);
                 inputSource = new InputSource(file.toURI().toURL().toString());
@@ -629,6 +635,7 @@ public class Catalina {
 
         // Start the new server
         try {
+            // 初始化sever
             getServer().init();
         } catch (LifecycleException e) {
             if (Boolean.getBoolean("org.apache.catalina.startup.EXIT_ON_INIT_FAILURE")) {
