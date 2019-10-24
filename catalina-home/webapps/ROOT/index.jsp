@@ -35,13 +35,13 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
     <body>
         <div id="wrapper">
             <div id="navigation" class="curved container">
-                <span id="nav-home"><a href="${tomcatUrl}">Home</a></span>
-                <span id="nav-hosts"><a href="${tomcatDocUrl}">Documentation</a></span>
-                <span id="nav-config"><a href="${tomcatDocUrl}config/">Configuration</a></span>
-                <span id="nav-examples"><a href="${tomcatExamplesUrl}">Examples</a></span>
-                <span id="nav-wiki"><a href="https://wiki.apache.org/tomcat/FrontPage">Wiki</a></span>
+                <span id="nav-home"><a href="${tomcatUrl}">主页</a></span>
+                <span id="nav-hosts"><a href="${tomcatDocUrl}">文件</a></span>
+                <span id="nav-config"><a href="${tomcatDocUrl}config/">配置</a></span>
+                <span id="nav-examples"><a href="${tomcatExamplesUrl}">例子</a></span>
+                <span id="nav-wiki"><a href="https://wiki.apache.org/tomcat/FrontPage">维基</a></span>
                 <span id="nav-lists"><a href="${tomcatUrl}lists.html">Mailing Lists</a></span>
-                <span id="nav-help"><a href="${tomcatUrl}findhelp.html">Find Help</a></span>
+                <span id="nav-help"><a href="${tomcatUrl}findhelp.html">帮助</a></span>
                 <br class="separator" />
             </div>
             <div id="asf-box">

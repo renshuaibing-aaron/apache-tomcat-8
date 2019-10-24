@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="324aeed6-97cb-4037-b3dc-ca7aec7ccfe7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/catalina-home/webapps/ROOT/index03.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Catalina.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Catalina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalina-home/logs/catalina.2019-09-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/catalina-home/logs/catalina.2019-09-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalina-home/logs/localhost.2019-09-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/catalina-home/logs/localhost.2019-09-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalina-home/logs/localhost_access_log.2019-09-26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/catalina-home/logs/localhost_access_log.2019-09-26.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalina-home/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/catalina-home/webapps/ROOT/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,46 +22,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Bootstrap.java">
+        <entry file="file://$PROJECT_DIR$/catalina-home/webapps/ROOT/index03.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="234">
+              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index02_jsp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#19552#0" expanded="true" />
+                <element signature="e#0#5222#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index03_jsp.class">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index03_jsp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="119" column="27" lean-forward="true" selection-start-line="108" selection-start-column="4" selection-end-line="119" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#5222#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Catalina.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2045">
-              <caret line="320" column="23" lean-forward="true" selection-start-line="320" selection-start-column="23" selection-end-line="320" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#30276#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/tomcat/util/digester/Digester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="1684" column="31" selection-start-line="1684" selection-start-column="16" selection-end-line="1684" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1118">
-              <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#6319#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/docs/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="390">
+                <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -81,6 +82,8 @@
       <find>getServer().init();</find>
       <find>addObjectCreate</find>
       <find>digester.addObjectCreate(&quot;Server&quot;</find>
+      <find>1999-2019 Apache Software Foundation.  All Rights Reserved</find>
+      <find>Insert title here</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,6 +99,10 @@
         <option value="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java" />
         <option value="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Bootstrap.java" />
         <option value="$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Catalina.java" />
+        <option value="$PROJECT_DIR$/catalina-home/webapps/ROOT/index.jsp" />
+        <option value="$PROJECT_DIR$/catalina-home/webapps/ROOT/index02.jsp" />
+        <option value="$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index03_jsp.java" />
+        <option value="$PROJECT_DIR$/docs/readme.md" />
       </list>
     </option>
   </component>
@@ -127,7 +134,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
     <option name="width" value="1915" />
     <option name="height" value="1040" />
@@ -139,7 +146,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,52 +161,113 @@
             <path>
               <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
               <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
-              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="webapps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
               <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
-              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="webapps" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
               <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
-              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
               <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
-              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="localhost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="localhost" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="localhost" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="localhost" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="apache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
               <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
-              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina-home" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="Catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="localhost" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="catalina" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unknown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apache-tomcat-8" type="462c0819:PsiDirectoryNode" />
+              <item name="Tomcat8.5.33" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/catalina-home/webapps/ROOT" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HR-code\20190116\2019-8-9-test\apache-tomcat-8\catalina-home\webapps\ROOT" />
+      <recent name="E:\HR-code\20190116\2019-8-9-test\apache-tomcat-8\catalina-home\webapps\ROOT\WEB-INF" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,18 +305,19 @@
       <workItem from="1569500470399" duration="4084000" />
       <workItem from="1569642719258" duration="1862000" />
       <workItem from="1569806245129" duration="619000" />
-      <workItem from="1571730173786" duration="2520000" />
+      <workItem from="1571730173786" duration="3114000" />
+      <workItem from="1571884299883" duration="1930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9974000" />
+    <option name="totallyTimeSpent" value="12498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-3" y="0" width="1915" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19688842" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3483451" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -258,7 +326,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44097996" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39115646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -280,6 +348,38 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3483451" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39115646" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32962137" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32962137" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3299356" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -426,40 +526,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1118">
-          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#6319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="e#0#19552#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2860">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/tomcat/util/digester/Digester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
+        <state relative-caret-position="42354">
           <caret line="1684" column="31" selection-start-line="1684" selection-start-column="16" selection-end-line="1684" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tomcat8.5.33/java/org/apache/catalina/startup/Catalina.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2045">
-          <caret line="320" column="23" lean-forward="true" selection-start-line="320" selection-start-column="23" selection-end-line="320" selection-end-column="23" />
+        <state relative-caret-position="767">
+          <caret line="320" column="23" selection-start-line="320" selection-start-column="23" selection-end-line="320" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/host-manager/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/host-manager/manager.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/examples/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/ROOT/WEB-INF/index01.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index2_jsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#30276#0" expanded="true" />
+            <element signature="e#0#30319#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index2_jsp.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index02_jsp.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#5626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/ROOT/index2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/ROOT/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/webapps/ROOT/index03.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index02_jsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#5222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index03_jsp.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalina-home/work/Catalina/localhost/ROOT/org/apache/jsp/index03_jsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="119" column="27" lean-forward="true" selection-start-line="108" selection-start-column="4" selection-end-line="119" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#5222#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="390">
+            <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
