@@ -128,6 +128,9 @@ public abstract class AbstractEndpoint<S> {
         UNBOUND, BOUND_ON_INIT, BOUND_ON_START, SOCKET_CLOSED_ON_STOP
     }
 
+    /**
+     * AbstractEndpoint.Acceptor是AbstractEndpoint类的静态抽象类，实现了Runnable接口
+     */
     public abstract static class Acceptor implements Runnable {
         public enum AcceptorState {
             NEW, RUNNING, PAUSED, ENDED
@@ -1034,6 +1037,8 @@ public abstract class AbstractEndpoint<S> {
      */
     public boolean processSocket(SocketWrapperBase<S> socketWrapper,
             SocketEvent event, boolean dispatch) {
+
+        System.out.println("===processSocket=========");
         try {
             if (socketWrapper == null) {
                 return false;

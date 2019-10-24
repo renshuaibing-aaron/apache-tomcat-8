@@ -294,6 +294,7 @@ public class CoyoteAdapter implements Adapter {
         return success;
     }
 
+    //Adapter.service()方法之后便将封装了Request以及Response对象的Socket传给Container容器了
 
     @Override
     public void service(org.apache.coyote.Request req, org.apache.coyote.Response res)

@@ -414,6 +414,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
                 channel.setIOChannel(socket);
                 channel.reset();
             }
+            // 将channel注册到poller，注意关键的两个方法，`getPoller0()`和`Poller.register()`
             getPoller0().register(channel);
         } catch (Throwable t) {
             ExceptionUtils.handleThrowable(t);
@@ -443,6 +444,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
 
     // --------------------------------------------------- Acceptor Inner Class
     /**
+     * NioEndpoint的Acceptor成员内部类继承了AbstractEndpoint.Acceptor：
      * The background thread that listens for incoming TCP/IP connections and
      * hands them off to an appropriate processor.
      */
@@ -457,6 +459,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
             while (running) {
 
                 // Loop if endpoint is paused
+                // 1. 运行过程中，如果`Endpoint`暂停了，则`Acceptor`进行自旋（间隔50毫秒）
                 while (paused && running) {
                     state = AcceptorState.PAUSED;
                     try {
@@ -466,6 +469,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
                     }
                 }
 
+                // 2. 如果`Endpoint`终止运行了，则`Acceptor`也会终止
                 if (!running) {
                     break;
                 }
@@ -473,12 +477,14 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
 
                 try {
                     //if we have reached max connections, wait
+                    // 3. 如果请求达到了最大连接数，则wait直到连接数降下来
                     countUpOrAwaitConnection();
 
                     SocketChannel socket = null;
                     try {
                         // Accept the next incoming connection from the server
                         // socket
+                        // // 4. 接受下一次连接的socket
                         socket = serverSock.accept();
                     } catch (IOException ioe) {
                         // We didn't get a socket
@@ -499,6 +505,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
                     if (running && !paused) {
                         // setSocketOptions() will hand the socket off to
                         // an appropriate processor if successful
+                        // 5. `setSocketOptions()`这儿是关键，会将socket以事件的方式传递给poller
                         if (!setSocketOptions(socket)) {
                             closeSocket(socket);
                         }
@@ -637,6 +644,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
     }
 
     /**
+     * Poller线程主要用于以较少的资源轮询已连接套接字以保持连接，当数据可用时转给工作线程
      * Poller class.
      */
     public class Poller implements Runnable {

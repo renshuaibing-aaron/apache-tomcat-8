@@ -803,6 +803,8 @@ public abstract class AbstractProtocol<S> implements ProtocolHandler,
 
                 SocketState state = SocketState.CLOSED;
                 do {
+
+                    //关键的代码
                     state = processor.process(wrapper, status);
 
                     if (state == SocketState.UPGRADING) {
