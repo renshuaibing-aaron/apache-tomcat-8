@@ -647,6 +647,7 @@ public class Catalina {
 
         long t2 = System.nanoTime();
         if(log.isInfoEnabled()) {
+            System.out.println("==========完成初始化工作================");
             log.info("Initialization processed in " + ((t2 - t1) / 1000000) + " ms");
         }
     }
