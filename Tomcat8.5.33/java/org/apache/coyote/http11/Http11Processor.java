@@ -1,19 +1,3 @@
-/*
- *  Licensed to the Apache Software Foundation (ASF) under one or more
- *  contributor license agreements.  See the NOTICE file distributed with
- *  this work for additional information regarding copyright ownership.
- *  The ASF licenses this file to You under the Apache License, Version 2.0
- *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
 package org.apache.coyote.http11;
 
 import java.io.IOException;
@@ -223,10 +207,10 @@ public class Http11Processor extends AbstractProcessor {
 
 
     public Http11Processor(int maxHttpHeaderSize, boolean allowHostHeaderMismatch,
-            boolean rejectIllegalHeaderName, AbstractEndpoint<?> endpoint, int maxTrailerSize,
-            Set<String> allowedTrailerHeaders, int maxExtensionSize, int maxSwallowSize,
-            Map<String,UpgradeProtocol> httpUpgradeProtocols, boolean sendReasonPhrase,
-            String relaxedPathChars, String relaxedQueryChars) {
+                           boolean rejectIllegalHeaderName, AbstractEndpoint<?> endpoint, int maxTrailerSize,
+                           Set<String> allowedTrailerHeaders, int maxExtensionSize, int maxSwallowSize,
+                           Map<String,UpgradeProtocol> httpUpgradeProtocols, boolean sendReasonPhrase,
+                           String relaxedPathChars, String relaxedQueryChars) {
 
         super(endpoint);
 
@@ -315,7 +299,7 @@ public class Http11Processor extends AbstractProcessor {
             this.noCompressionUserAgents = null;
         } else {
             this.noCompressionUserAgents =
-                Pattern.compile(noCompressionUserAgents);
+                    Pattern.compile(noCompressionUserAgents);
         }
     }
 
@@ -352,12 +336,12 @@ public class Http11Processor extends AbstractProcessor {
      */
     public String getCompression() {
         switch (compressionLevel) {
-        case 0:
-            return "off";
-        case 1:
-            return "on";
-        case 2:
-            return "force";
+            case 0:
+                return "off";
+            case 1:
+                return "on";
+            case 2:
+                return "force";
         }
         return "off";
     }
@@ -511,10 +495,10 @@ public class Http11Processor extends AbstractProcessor {
 
         // Check if content is not already gzipped
         MessageBytes contentEncodingMB =
-            response.getMimeHeaders().getValue("Content-Encoding");
+                response.getMimeHeaders().getValue("Content-Encoding");
 
         if ((contentEncodingMB != null)
-            && (contentEncodingMB.indexOf("gzip") != -1)) {
+                && (contentEncodingMB.indexOf("gzip") != -1)) {
             return false;
         }
 
@@ -526,7 +510,7 @@ public class Http11Processor extends AbstractProcessor {
         // Check if sufficient length to trigger the compression
         long contentLength = response.getContentLengthLong();
         if ((contentLength == -1)
-            || (contentLength > compressionMinSize)) {
+                || (contentLength > compressionMinSize)) {
             // Check for compatible MIME-TYPE
             if (compressableMimeTypes != null) {
                 return (startsWithStringArray(compressableMimeTypes, response.getContentType()));
@@ -545,10 +529,10 @@ public class Http11Processor extends AbstractProcessor {
 
         // Check if browser support gzip encoding
         MessageBytes acceptEncodingMB =
-            request.getMimeHeaders().getValue("accept-encoding");
+                request.getMimeHeaders().getValue("accept-encoding");
 
         if ((acceptEncodingMB == null)
-            || (acceptEncodingMB.indexOf("gzip") == -1)) {
+                || (acceptEncodingMB.indexOf("gzip") == -1)) {
             return false;
         }
 
@@ -560,7 +544,7 @@ public class Http11Processor extends AbstractProcessor {
         // Check for incompatible Browser
         if (noCompressionUserAgents != null) {
             MessageBytes userAgentValueMB =
-                request.getMimeHeaders().getValue("user-agent");
+                    request.getMimeHeaders().getValue("user-agent");
             if(userAgentValueMB != null) {
                 String userAgentValue = userAgentValueMB.toString();
 
@@ -613,13 +597,13 @@ public class Http11Processor extends AbstractProcessor {
      */
     private static boolean statusDropsConnection(int status) {
         return status == 400 /* SC_BAD_REQUEST */ ||
-               status == 408 /* SC_REQUEST_TIMEOUT */ ||
-               status == 411 /* SC_LENGTH_REQUIRED */ ||
-               status == 413 /* SC_REQUEST_ENTITY_TOO_LARGE */ ||
-               status == 414 /* SC_REQUEST_URI_TOO_LONG */ ||
-               status == 500 /* SC_INTERNAL_SERVER_ERROR */ ||
-               status == 503 /* SC_SERVICE_UNAVAILABLE */ ||
-               status == 501 /* SC_NOT_IMPLEMENTED */;
+                status == 408 /* SC_REQUEST_TIMEOUT */ ||
+                status == 411 /* SC_LENGTH_REQUIRED */ ||
+                status == 413 /* SC_REQUEST_ENTITY_TOO_LARGE */ ||
+                status == 414 /* SC_REQUEST_URI_TOO_LONG */ ||
+                status == 500 /* SC_INTERNAL_SERVER_ERROR */ ||
+                status == 503 /* SC_SERVICE_UNAVAILABLE */ ||
+                status == 501 /* SC_NOT_IMPLEMENTED */;
     }
 
 
@@ -637,7 +621,7 @@ public class Http11Processor extends AbstractProcessor {
             // Skip
         } else if (encodingName.equals("chunked")) {
             inputBuffer.addActiveFilter
-                (inputFilters[Constants.CHUNKED_FILTER]);
+                    (inputFilters[Constants.CHUNKED_FILTER]);
             contentDelimitation = true;
         } else {
             for (int i = pluggableFilterIndex; i < inputFilters.length; i++) {
@@ -652,7 +636,7 @@ public class Http11Processor extends AbstractProcessor {
             setErrorState(ErrorState.CLOSE_CLEAN, null);
             if (log.isDebugEnabled()) {
                 log.debug(sm.getString("http11processor.request.prepare") +
-                          " Unsupported transfer encoding [" + encodingName + "]");
+                        " Unsupported transfer encoding [" + encodingName + "]");
             }
         }
     }
@@ -660,7 +644,7 @@ public class Http11Processor extends AbstractProcessor {
 
     @Override
     public SocketState service(SocketWrapperBase<?> socketWrapper)
-        throws IOException {
+            throws IOException {
         RequestInfo rp = request.getRequestProcessor();
         rp.setStage(org.apache.coyote.Constants.STAGE_PARSE);
 
@@ -980,7 +964,7 @@ public class Http11Processor extends AbstractProcessor {
             setErrorState(ErrorState.CLOSE_CLEAN, null);
             if (log.isDebugEnabled()) {
                 log.debug(sm.getString("http11processor.request.prepare")+
-                          " Unsupported HTTP version \""+protocolMB+"\"");
+                        " Unsupported HTTP version \""+protocolMB+"\"");
             }
         }
 
@@ -993,7 +977,7 @@ public class Http11Processor extends AbstractProcessor {
             if (findBytes(connectionValueBC, Constants.CLOSE_BYTES) != -1) {
                 keepAlive = false;
             } else if (findBytes(connectionValueBC,
-                                 Constants.KEEPALIVE_BYTES) != -1) {
+                    Constants.KEEPALIVE_BYTES) != -1) {
                 keepAlive = true;
             }
         }
@@ -1241,7 +1225,7 @@ public class Http11Processor extends AbstractProcessor {
                 statusCode == 304) {
             // No entity body
             outputBuffer.addActiveFilter
-                (outputFilters[Constants.VOID_FILTER]);
+                    (outputFilters[Constants.VOID_FILTER]);
             entityBody = false;
             contentDelimitation = true;
             if (statusCode == 205) {
@@ -1257,7 +1241,7 @@ public class Http11Processor extends AbstractProcessor {
         if (methodMB.equals("HEAD")) {
             // No entity body
             outputBuffer.addActiveFilter
-                (outputFilters[Constants.VOID_FILTER]);
+                    (outputFilters[Constants.VOID_FILTER]);
             contentDelimitation = true;
         }
 
@@ -1290,7 +1274,7 @@ public class Http11Processor extends AbstractProcessor {
             String contentLanguage = response.getContentLanguage();
             if (contentLanguage != null) {
                 headers.setValue("Content-Language")
-                    .setString(contentLanguage);
+                        .setString(contentLanguage);
             }
         }
 
@@ -1299,7 +1283,7 @@ public class Http11Processor extends AbstractProcessor {
         if (contentLength != -1) {
             headers.setValue("Content-Length").setLong(contentLength);
             outputBuffer.addActiveFilter
-                (outputFilters[Constants.IDENTITY_FILTER]);
+                    (outputFilters[Constants.IDENTITY_FILTER]);
             contentDelimitation = true;
         } else {
             // If the response code supports an entity body and we're on
@@ -1307,12 +1291,12 @@ public class Http11Processor extends AbstractProcessor {
             connectionClosePresent = isConnectionClose(headers);
             if (entityBody && http11 && !connectionClosePresent) {
                 outputBuffer.addActiveFilter
-                    (outputFilters[Constants.CHUNKED_FILTER]);
+                        (outputFilters[Constants.CHUNKED_FILTER]);
                 contentDelimitation = true;
                 headers.addValue(Constants.TRANSFERENCODING).setString(Constants.CHUNKED);
             } else {
                 outputBuffer.addActiveFilter
-                    (outputFilters[Constants.IDENTITY_FILTER]);
+                        (outputFilters[Constants.IDENTITY_FILTER]);
             }
         }
 
@@ -1687,15 +1671,15 @@ public class Http11Processor extends AbstractProcessor {
             }
             result = socketWrapper.processSendfile(sendfileData);
             switch (result) {
-            case ERROR:
-                // Write failed
-                if (log.isDebugEnabled()) {
-                    log.debug(sm.getString("http11processor.sendfile.error"));
-                }
-                setErrorState(ErrorState.CLOSE_CONNECTION_NOW, null);
-                //$FALL-THROUGH$
-            default:
-                sendfileData = null;
+                case ERROR:
+                    // Write failed
+                    if (log.isDebugEnabled()) {
+                        log.debug(sm.getString("http11processor.sendfile.error"));
+                    }
+                    setErrorState(ErrorState.CLOSE_CONNECTION_NOW, null);
+                    //$FALL-THROUGH$
+                default:
+                    sendfileData = null;
             }
         }
         return result;

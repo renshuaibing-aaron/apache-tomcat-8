@@ -212,10 +212,13 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
     @Override
     public void bind() throws Exception {
 
+        System.out.println("============绑定端口==================");
         if (!getUseInheritedChannel()) {
             serverSock = ServerSocketChannel.open();
             socketProperties.setProperties(serverSock.socket());
             InetSocketAddress addr = (getAddress()!=null?new InetSocketAddress(getAddress(),getPort()):new InetSocketAddress(getPort()));
+
+            // 第二个参数 backlog 默认为 100，超过 100 的时候，新连接会被拒绝(不过源码注释也说了，这个值的真实语义取决于具体实现)
             serverSock.socket().bind(addr,getAcceptCount());
         } else {
             // Retrieve the channel provided by the OS
@@ -227,17 +230,25 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
                 throw new IllegalArgumentException(sm.getString("endpoint.init.bind.inherited"));
             }
         }
+
+        // ※※※ 设置 ServerSocketChannel 为阻塞模式 ※※※
         serverSock.configureBlocking(true); //mimic APR behavior
 
         // Initialize thread count defaults for acceptor, poller
         if (acceptorThreadCount == 0) {
             // FIXME: Doesn't seem to work that well with multiple accept threads
+            // 作者想表达的意思应该是：使用多个 acceptor 线程并不见得性能会更好
             acceptorThreadCount = 1;
         }
+
+        // poller 线程数，默认值定义如下，所以在多核模式下，默认为 2
         if (pollerThreadCount <= 0) {
             //minimum one poller thread
             pollerThreadCount = 1;
         }
+
+
+
         setStopLatch(new CountDownLatch(pollerThreadCount));
 
         // Initialize SSL if needed
