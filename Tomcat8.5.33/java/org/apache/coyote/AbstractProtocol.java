@@ -540,6 +540,7 @@ public abstract class AbstractProtocol<S> implements ProtocolHandler,
 
     @Override
     public void init() throws Exception {
+        System.out.println("============AbstractProtocol # init=============");
         if (getLog().isInfoEnabled()) {
             getLog().info(sm.getString("abstractProtocolHandler.init", getName()));
         }
@@ -568,10 +569,11 @@ public abstract class AbstractProtocol<S> implements ProtocolHandler,
 
     @Override
     public void start() throws Exception {
+        System.out.println("===========AbstractProtocol # start===========");
         if (getLog().isInfoEnabled()) {
             getLog().info(sm.getString("abstractProtocolHandler.start", getName()));
         }
-
+        // 调用 endpoint 的 start 方法
         endpoint.start();
 
         // Start async timeout thread

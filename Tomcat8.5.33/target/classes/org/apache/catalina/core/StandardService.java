@@ -412,7 +412,10 @@ public class StandardService extends LifecycleMBeanBase implements Service {
     @Override
     protected void startInternal() throws LifecycleException {
 
-        if(log.isInfoEnabled())
+        if(log.isInfoEnabled()) {
+
+        }
+        System.out.println("=======启动服务===============");
             log.info(sm.getString("standardService.start.name", this.name));
         setState(LifecycleState.STARTING);
 

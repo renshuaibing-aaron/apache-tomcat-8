@@ -645,7 +645,10 @@ public class Http11Processor extends AbstractProcessor {
     @Override
     public SocketState service(SocketWrapperBase<?> socketWrapper)
             throws IOException {
+
+        //这个时候已经解析
         RequestInfo rp = request.getRequestProcessor();
+        System.out.println("==========处理请求Http11Processor#service.rp================"+rp);
         rp.setStage(org.apache.coyote.Constants.STAGE_PARSE);
 
         // Setting up the I/O

@@ -865,6 +865,8 @@ public abstract class AbstractEndpoint<S> {
         internalExecutor = true;
         TaskQueue taskqueue = new TaskQueue();
         TaskThreadFactory tf = new TaskThreadFactory(getName() + "-exec-", daemon, getThreadPriority());
+        System.out.println("tomcat线程池参数最小线程数"+getMinSpareThreads());
+        System.out.println("tomcat线程池参数最大线程数"+getMaxThreads());
         executor = new ThreadPoolExecutor(getMinSpareThreads(), getMaxThreads(), 60, TimeUnit.SECONDS,taskqueue, tf);
         taskqueue.setParent( (ThreadPoolExecutor) executor);
     }
@@ -1035,24 +1037,26 @@ public abstract class AbstractEndpoint<S> {
      *
      * @return if processing was triggered successfully
      */
-    public boolean processSocket(SocketWrapperBase<S> socketWrapper,
-            SocketEvent event, boolean dispatch) {
+    public boolean processSocket(SocketWrapperBase<S> socketWrapper,    SocketEvent event, boolean dispatch) {
 
-        System.out.println("===processSocket=========");
+        System.out.println("===processSocket处理事件=========");
         try {
             if (socketWrapper == null) {
                 return false;
             }
             SocketProcessorBase<S> sc = processorCache.pop();
             if (sc == null) {
+                // 创建一个 SocketProcessor 的实例
                 sc = createSocketProcessor(socketWrapper, event);
             } else {
                 sc.reset(socketWrapper, event);
             }
             Executor executor = getExecutor();
             if (dispatch && executor != null) {
+                // 将任务放到之前建立的 worker 线程池中执行
                 executor.execute(sc);
             } else {
+                // ps: 如果 dispatch 为 false，那么就当前线程自己执行
                 sc.run();
             }
         } catch (RejectedExecutionException ree) {
@@ -1088,7 +1092,9 @@ public abstract class AbstractEndpoint<S> {
     public abstract void stopInternal() throws Exception;
 
     public void init() throws Exception {
+        System.out.println("============AbstractEndpoint # init=============");
         if (bindOnInit) {
+            //这里对应的当然是子类 NioEndpoint 的 bind() 方法
             bind();
             bindState = BindState.BOUND_ON_INIT;
         }
@@ -1152,10 +1158,14 @@ public abstract class AbstractEndpoint<S> {
 
 
     public final void start() throws Exception {
+        System.out.println("===========AbstractEndpoint # start==========");
+        // 按照我们的流程，刚刚 init 的时候，已经把 bindState 改为 BindState.BOUND_ON_INIT 了，
+        // 所以下面的 if 分支我们就不进去了
         if (bindState == BindState.UNBOUND) {
             bind();
             bindState = BindState.BOUND_ON_START;
         }
+        // 往里看 NioEndpoint 的实现
         startInternal();
     }
 

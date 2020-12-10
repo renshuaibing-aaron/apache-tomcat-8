@@ -167,6 +167,7 @@ public class SecureNioChannel extends NioChannel  {
      */
     @Override
     public int handshake(boolean read, boolean write) throws IOException {
+        System.out.println("=========handshake========");
         if (handshakeComplete) {
             return 0; //we have done our initial handshake
         }

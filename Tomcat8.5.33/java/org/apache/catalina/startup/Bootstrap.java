@@ -459,6 +459,7 @@ public final class Bootstrap {
      */
     public static void main(String args[]) {
 
+        System.out.println("**************tomcat 启动******************");
         if (daemon == null) {
             // Don't set daemon until init() has completed
             Bootstrap bootstrap = new Bootstrap();
